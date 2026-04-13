@@ -1,0 +1,7 @@
+control_id,control_name,framework,status,evidence_file,last_review_date,notes
+CC6.1,Logical and Physical Access Controls,SOC2,deficient,access-list.xlsx,2024-01-01,3 terminated employees retain active SSO accounts as of 2024-03-15
+CC6.3,Registration and Authorization,SOC2,satisfied,hr-termination-log.csv,2024-03-01,Offboarding process documented and followed for 47 of 50 terminations
+CC7.1,System Monitoring,SOC2,deficient,monitoring-config.pdf,2024-02-15,Log4j patch not applied to prod-api-01 and prod-api-02
+CC7.2,Incident Response,SOC2,missing,,,"No incident response runbook tested in audit period Q1-2025; last tabletop exercise was Q3-2023"
+CC8.1,Change Management,SOC2,satisfied,change-tickets.csv,2024-03-10,All production changes tracked via ServiceNow with approvals
+A1.1,Availability Commitments,SOC2,partial,uptime-report.pdf,2024-03-15,99.1% uptime vs 99.9% SLA commitment; 3 unplanned outages in period
