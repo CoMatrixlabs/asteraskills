@@ -7,13 +7,14 @@ from typing import Iterable, List
 
 from langchain_core.tools import BaseTool
 
-from asteraskills.tools import TOOL_REGISTRY
-
 logger = logging.getLogger(__name__)
 
 
 def tools_for_keys(keys: Iterable[str]) -> List[BaseTool]:
     """Deduplicate registry keys and LangChain tool ``name`` while preserving order."""
+    # Lazy import to break circular: tools/__init__ -> agents -> tools_loader -> tools
+    from asteraskills.tools import TOOL_REGISTRY
+
     seen_keys: set[str] = set()
     seen_tool_names: set[str] = set()
     out: List[BaseTool] = []
