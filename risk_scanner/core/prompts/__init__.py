@@ -40,6 +40,7 @@ _PROMPT_FILES: dict[str, str] = {
     "PROMPT-15": "prompt-15-cross-finding-correlation",
     "PROMPT-16": "prompt-16-kill-chain-narrative",
     "PROMPT-17": "prompt-17-kev-context",
+    "PROMPT-18": "prompt-18-sast-finding-analysis",
 }
 
 

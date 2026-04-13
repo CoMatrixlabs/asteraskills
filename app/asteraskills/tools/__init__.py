@@ -66,6 +66,7 @@ from asteraskills.tools.security_ontology_tools import (
     SECURITY_ONTOLOGY_TOOL_REGISTRY,
     make_security_ontology_search as create_security_ontology_search_tool,
 )
+from asteraskills.tools.sast_finding_analyzer import create_sast_finding_analyzer_tool
 from asteraskills.tools.detection_tools import (
     DETECTION_TOOL_REGISTRY,
     make_detection_scenario_search as create_detection_scenario_search_tool,
@@ -136,6 +137,7 @@ __all__ = [
     "create_list_playbook_data_sources_tool",
     "create_synthesize_playbook_tool",
     "create_security_ontology_search_tool",
+    "create_sast_finding_analyzer_tool",
 ]
 
 TOOL_REGISTRY: Dict[str, Callable[[], BaseTool]] = {
@@ -187,6 +189,8 @@ TOOL_REGISTRY: Dict[str, Callable[[], BaseTool]] = {
     # Detection analysis tools (CVE alert investigation)
     **DETECTION_TOOL_REGISTRY,
     **SECURITY_ONTOLOGY_TOOL_REGISTRY,
+    # SAST finding triage
+    "sast_finding_analyzer": create_sast_finding_analyzer_tool,
 }
 
 
